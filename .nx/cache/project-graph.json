@@ -1,0 +1,38 @@
+{
+  "nodes": {
+    "grapefruit": {
+      "name": "grapefruit",
+      "type": "lib",
+      "data": {
+        "root": ".",
+        "sourceRoot": ".",
+        "name": "grapefruit",
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "configurations": {}
+          },
+          "nx-release-publish": {
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "executor": "@nx/js:release-publish",
+            "options": {},
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": [],
+        "tags": []
+      }
+    }
+  },
+  "externalNodes": {},
+  "dependencies": {
+    "grapefruit": []
+  },
+  "version": "6.0"
+}
